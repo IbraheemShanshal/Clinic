@@ -1,22 +1,17 @@
 {
-  "name": "electron-test",
+  "name": "Clinic",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
-    "rebuild": "electron-rebuild -f -w sqlite3",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^5.0.6",
-    "knex": "^0.19.0",
-    "sqlite3": "^4.0.9"
-  },
-  "devDependencies": {
-    "electron-rebuild": "^1.8.5"
+    "electron": "^30.0.9",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Patient</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Add Patient</h1>
+    </header>
+    <main>
+      <section id="add-patient-form">
+        <form id="add-patient-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number"><br><br>
+            <label for="medical-history">Medical History:</label>
+            <textarea id="medical-history" name="medical-history"></textarea><br><br>
+            <button id="add-patient-btn">Add Patient</button>
+          </form>
+      </section>
+    </main>
+    <footer>
+        <button id="back-btn", onclick="history.back()">Back</button>
+      </footer>
+    <script src="add-patient.js"></script>
+  </body>
+</html>
+<script>
+    const { ipcRenderer } = require('electron');
+  
+    ipcRenderer.on('search-results', (event, results) => {
+      // Process the search results here
+      console.log('Search results:', results);
+      // Update the HTML page with the search results
+    });
+  
+    ipcRenderer.on('error', (event, message) => {
+      console.error('Error:', message);
+    });
+  </script>
